@@ -8,7 +8,7 @@ export default function Hero() {
       {/* 1. CINEMATIC BACKGROUND IMAGE */}
       <div className="absolute inset-0 -z-20">
         <Image
-          src="/hero001.jpg" /* Changed to .jpg based on file evidence */
+          src="/hero001.jpeg" /* Corrected to .jpeg based on user screenshot evidence */
           alt="Fachada Tienda V-Market Ciudad Venecia"
           fill
           priority
