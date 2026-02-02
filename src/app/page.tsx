@@ -34,16 +34,17 @@ export default function Home() {
             </button>
             <button className="group flex items-center gap-2 border border-[var(--vm-border)] text-[var(--vm-text-100)] px-8 py-4 rounded-full font-medium text-lg hover:bg-[var(--vm-surface)] transition-all duration-300 w-full sm:w-auto">
               <span>Ver Ubicaciones</span>
-              <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              {/* Fixed SVG size with explicit attributes */}
+              <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </button>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
+        {/* Scroll Indicator - Fixed SVG size with explicit attributes */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
-          <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-6 h-6 text-white" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>
