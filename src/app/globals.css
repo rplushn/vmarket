@@ -1,10 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @import "../styles/tokens.css";
 
-/* V-Market: base font from design system */
+@theme {
+  --font-sans: var(--font-sans-loaded), "Mona Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* V-Market: base font */
 body {
   font-family: var(--font-sans);
 }
@@ -47,14 +49,11 @@ body {
 }
 
 /* V-Market layout utilities */
-
-/* Section wrapper base */
 .vm-section {
   padding-block: var(--section-padding-y);
   padding-inline: var(--section-padding-x);
 }
 
-/* Section variants */
 .vm-section--light {
   background-color: var(--color-bg-cream);
   color: var(--color-text-primary);
@@ -75,7 +74,6 @@ body {
   color: var(--color-footer-text);
 }
 
-/* Container */
 .vm-container {
   width: 100%;
   max-width: var(--container-max-width);
