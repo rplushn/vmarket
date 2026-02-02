@@ -8,7 +8,7 @@ export default function Hero() {
       {/* 1. CINEMATIC BACKGROUND IMAGE */}
       <div className="absolute inset-0 -z-20">
         <Image
-          src="/hero001.jpeg" /* Corrected extension based on user input */
+          src="/hero001.jpg" /* Changed to .jpg based on file evidence */
           alt="Fachada Tienda V-Market Ciudad Venecia"
           fill
           priority
@@ -18,9 +18,7 @@ export default function Hero() {
       </div>
 
       {/* 2. OVERLAYS (Gradient Masks) */}
-      {/* Heavy bottom gradient to blend with next section */}
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--vm-green-950)] via-[var(--vm-green-950)]/80 to-[var(--vm-green-950)]/30 -z-10" />
-      {/* Subtle radial gradient to focus center */}
       <div className="absolute inset-0 bg-radial-[circle_at_center,_var(--vm-green-950)_0%,_transparent_100%] opacity-40 -z-10" />
 
       {/* 3. HERO CONTENT */}
