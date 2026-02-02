@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 // Import the image directly from the app folder
 // User must move image to src/app/portada.jpg
-import portadaImg from '../../app/portada.jpg'; /* Corrected path: up 2 levels */
+import portadaImg from '../app/portada.jpg'; /* Corrected path: up 1 level only */
 
 export default function Hero() {
   return (
