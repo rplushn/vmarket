@@ -2,86 +2,84 @@
 
 @import "../styles/tokens.css";
 
-@theme {
-  --font-sans: var(--font-sans-loaded), "Mona Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
 /* V-Market: base font */
 body {
   font-family: var(--font-sans);
 }
 
-/* V-Market typography utilities */
-.vm-h1 {
-  font-weight: 800;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  color: var(--vm-text-100);
-}
+/* V-Market typography utilities - Using @layer utilities for better Tailwind integration */
+@layer utilities {
+  .vm-h1 {
+    font-weight: 800;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--vm-text-100);
+  }
 
-.vm-h2 {
-  font-weight: 700;
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.1;
-  letter-spacing: -0.015em;
-  color: var(--vm-text-100);
-}
+  .vm-h2 {
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    color: var(--vm-text-100);
+  }
 
-.vm-h3 {
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 1.2;
-  color: var(--vm-text-100);
-}
+  .vm-h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: var(--vm-text-100);
+  }
 
-.vm-p {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.65;
-  color: var(--vm-text-300);
-}
+  .vm-p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--vm-text-300);
+  }
 
-.vm-muted {
-  font-weight: 400;
-  font-size: 0.95rem;
-  color: var(--vm-text-500);
-}
+  .vm-muted {
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: var(--vm-text-500);
+  }
 
-/* V-Market layout utilities */
-.vm-section {
-  padding-block: var(--section-padding-y);
-  padding-inline: var(--section-padding-x);
-}
+  /* V-Market layout utilities */
+  .vm-section {
+    padding-block: var(--section-padding-y);
+    padding-inline: var(--section-padding-x);
+  }
 
-.vm-section--light {
-  background-color: var(--color-bg-cream);
-  color: var(--color-text-primary);
-}
+  .vm-section--light {
+    background-color: var(--color-bg-cream);
+    color: var(--color-text-primary);
+  }
 
-.vm-section--dark {
-  background-color: var(--color-green-secondary);
-  color: var(--color-text-on-dark);
-}
+  .vm-section--dark {
+    background-color: var(--color-green-secondary);
+    color: var(--color-text-on-dark);
+  }
 
-.vm-section--primary {
-  background-color: var(--color-green-primary);
-  color: var(--color-text-on-dark);
-}
+  .vm-section--primary {
+    background-color: var(--color-green-primary);
+    color: var(--color-text-on-dark);
+  }
 
-.vm-section--gold {
-  background-color: var(--color-gold-bg);
-  color: var(--color-footer-text);
-}
+  .vm-section--gold {
+    background-color: var(--color-gold-bg);
+    color: var(--color-footer-text);
+  }
 
-.vm-container {
-  width: 100%;
-  max-width: var(--container-max-width);
-  margin-inline: auto;
-}
+  .vm-container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin-inline: auto;
+  }
 
-.vm-container--narrow {
-  width: 100%;
-  max-width: var(--container-narrow);
-  margin-inline: auto;
+  .vm-container--narrow {
+    width: 100%;
+    max-width: var(--container-narrow);
+    margin-inline: auto;
+  }
 }
