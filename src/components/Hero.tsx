@@ -8,7 +8,7 @@ export default function Hero() {
       {/* 1. CINEMATIC BACKGROUND IMAGE */}
       <div className="absolute inset-0 -z-20">
         <Image
-          src="/portada.jpg" /* Changed to simple name 'portada.jpg' to eliminate naming errors */
+          src="/portada.jpg" /* Updated to match user's file: portada.jpg */
           alt="Fachada Tienda V-Market Ciudad Venecia"
           fill
           priority
