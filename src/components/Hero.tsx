@@ -1,5 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
+// Import the image directly from the app folder
+// User must move image to src/app/portada.jpg
+import portadaImg from '../app/portada.jpg';
 
 export default function Hero() {
   return (
@@ -8,10 +11,11 @@ export default function Hero() {
       {/* 1. CINEMATIC BACKGROUND IMAGE */}
       <div className="absolute inset-0 -z-20">
         <Image
-          src="/portada.jpg" /* Updated to match user's file: portada.jpg */
+          src={portadaImg} /* Using the imported object directly */
           alt="Fachada Tienda V-Market Ciudad Venecia"
           fill
           priority
+          placeholder="blur" /* Bonus: Adds a blur effect while loading */
           className="object-cover animate-slow-zoom"
           quality={90}
         />
