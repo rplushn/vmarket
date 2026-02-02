@@ -1,4 +1,5 @@
 import FeaturesBento from "@/components/FeaturesBento";
+import MenuSplit from "@/components/MenuSplit";
 
 export default function Home() {
   return (
@@ -67,7 +68,10 @@ export default function Home() {
       {/* 3. BENTO GRID FEATURES */}
       <FeaturesBento />
 
-      {/* 4. FOOTER SIMPLE (Placeholder) */}
+      {/* 4. FOOD SECTION (NEW) */}
+      <MenuSplit />
+
+      {/* 5. FOOTER SIMPLE (Placeholder) */}
       <footer className="vm-section--gold py-12 mt-20">
         <div className="vm-container text-center">
           <h3 className="text-[var(--vm-green-950)] font-bold text-2xl mb-4">V-MARKET</h3>
