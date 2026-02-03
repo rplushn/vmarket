@@ -18,8 +18,8 @@ export default function Hero() {
       </div>
 
       {/* 2. OVERLAYS (z-10 to sit on top of image) */}
-      {/* Heavy darkness to make text pop */}
-      <div className="absolute inset-0 bg-[var(--vm-green-950)]/80 z-10" />
+      {/* Reduced darkness to 60% (from 80%) to let image shine through more */}
+      <div className="absolute inset-0 bg-[var(--vm-green-950)]/60 z-10" />
       
       {/* Subtle Golden Glow (Center-Top) */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[var(--vm-accent-gold)]/10 blur-[150px] rounded-full z-10 mix-blend-screen opacity-60 pointer-events-none" />
