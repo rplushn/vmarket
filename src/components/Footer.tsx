@@ -55,7 +55,7 @@ export default function Footer() {
                 <button
                     type="button"
                     onClick={() => openWhatsApp()}
-                    className="text-2xl font-bold text-[var(--vm-accent-lime)] hover:text-white transition-colors block mb-4 bg-transparent border-none cursor-pointer p-0 font-inherit text-right w-full"
+                    className="text-lg font-medium text-[var(--vm-accent-lime)] hover:text-white transition-colors block mb-4 bg-transparent border-none cursor-pointer p-0 font-inherit text-right w-full"
                 >
                     +504 8949-4639
                 </button>

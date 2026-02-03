@@ -163,6 +163,7 @@ body {
 
   /* V-Market layout utilities */
   .vm-section {
+    margin-top: 100px;
     padding-block: var(--section-padding-y);
     padding-inline: var(--section-padding-x);
   }
