@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function MenuSplit() {
   return (
@@ -11,17 +12,20 @@ export default function MenuSplit() {
           {/* Left: Image (Visual Anchor) */}
           <div className="w-full lg:w-1/2 relative">
             <div className="aspect-[4/5] rounded-[var(--vm-radius-xl)] overflow-hidden relative shadow-2xl group">
-               {/* Image Placeholder - Replace src with real food photo later */}
-               <div className="absolute inset-0 bg-[var(--vm-surface)] flex items-center justify-center text-[var(--vm-text-500)]">
-                  [FOTO COMIDA DELICIOSA]
-               </div>
+               {/* Real Food Image */}
+               <Image 
+                 src="/comida.jpg" 
+                 alt="Hamburguesa Clásica V-Market"
+                 fill
+                 className="object-cover transition-transform duration-700 group-hover:scale-105"
+               />
                
                {/* Overlay Content */}
                <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-[var(--vm-green-950)] to-transparent">
                   <span className="inline-block px-3 py-1 bg-[var(--vm-accent-lime)] text-[var(--vm-green-950)] text-xs font-bold rounded-full mb-2">
                     Desayunos hasta 11:30 AM
                   </span>
-                  <p className="text-white font-medium">Baleadas recién palmeadas</p>
+                  <p className="text-white font-medium">Sabor que te encanta</p>
                </div>
             </div>
             
@@ -42,18 +46,17 @@ export default function MenuSplit() {
               Desayunos típicos, almuerzos caseros y el mejor café de la zona. Todo preparado al momento con ingredientes frescos.
             </p>
 
-            {/* Menu Highlights List */}
-            <div className="space-y-6">
+            {/* Menu Highlights List */}\n            <div className="space-y-6">
               
               {/* Item 1 */}
               <div className="flex justify-between items-start group border-b border-[var(--vm-border)] pb-4">
                 <div>
                   <h4 className="text-[var(--vm-text-100)] font-bold text-lg group-hover:text-[var(--vm-accent-lime)] transition-colors">
-                    Baleada Especial
+                    Hamburguesa Clásica
                   </h4>
-                  <p className="text-[var(--vm-text-500)] text-sm mt-1">Huevo, frijoles, mantequilla, aguacate y carne.</p>
+                  <p className="text-[var(--vm-text-500)] text-sm mt-1">Carne de res, lechuga, tomate, cebolla y aderezo especial.</p>
                 </div>
-                <span className="text-[var(--vm-accent-gold)] font-bold">L45</span>
+                <span className="text-[var(--vm-accent-gold)] font-bold">L85</span>
               </div>
 
               {/* Item 2 */}
