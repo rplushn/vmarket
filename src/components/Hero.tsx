@@ -6,7 +6,7 @@ import { openWhatsApp } from '@/utils/whatsapp';
 
 export default function Hero() {
   return (
-    <section className="relative h-screen flex flex-col justify-center items-center text-center overflow-hidden bg-[var(--vm-green-950)] isolation-auto">
+    <section className="relative h-screen min-h-screen flex flex-col items-center text-center overflow-hidden bg-[var(--vm-green-950)] isolation-auto md:justify-center">
       
       {/* 1. BACKGROUND IMAGE (z-0 to ensure it sits on top of section background but behind content) */}
       <div className="absolute inset-0 z-0">
@@ -31,33 +31,30 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[var(--vm-green-950)] to-transparent z-10" />
 
       {/* 3. HERO CONTENT (z-20 to sit on top of everything) */}
-      <div className="vm-container relative z-20 px-4 mt-[300px]">
-        
-        {/* Badge */}
-        <span className="inline-block py-1 px-3 mb-6 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white/80 text-[10px] font-medium tracking-[0.2em] uppercase animate-fade-in-up">
-          Ciudad Venecia
-        </span>
-        
-        {/* Main Title - THIN FONT */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white mb-6 leading-[1.1] tracking-tight animate-fade-in-up-delay-1 drop-shadow-lg">
-          Tu mercado,<br />
-          <span className="font-normal text-[var(--vm-accent-lime)]">
-            a un paso de casa.
+      <div className="vm-container relative z-20 px-4 flex-1 flex flex-col justify-between pt-8 md:flex-none md:justify-center md:pt-0 md:mt-[300px] w-full max-w-5xl">
+        {/* Top block: badge + title + subtitle (center stays clear on mobile) */}
+        <div>
+          <span className="inline-block py-1 px-3 mb-6 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white/80 text-[10px] font-medium tracking-[0.2em] uppercase animate-fade-in-up">
+            Ciudad Venecia
           </span>
-        </h1>
-        
-        {/* Subtitle */}
-        <p className="max-w-xl mx-auto mb-12 text-lg md:text-xl font-light text-white/90 animate-fade-in-up-delay-2 leading-relaxed">
-          Canasta básica, comida típica y servicios del día a día. <br className="hidden md:block" />
-          Siempre cerca. Siempre abierto.
-        </p>
-        
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up-delay-2 mb-5">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white mb-6 leading-[1.1] tracking-tight animate-fade-in-up-delay-1 drop-shadow-lg">
+            Tu mercado,<br />
+            <span className="font-normal text-[var(--vm-accent-lime)]">
+              a un paso de casa.
+            </span>
+          </h1>
+          <p className="max-w-xl mx-auto mb-12 text-lg md:text-xl font-light text-white/90 animate-fade-in-up-delay-2 leading-relaxed">
+            Canasta básica, comida típica y servicios del día a día. <br className="hidden md:block" />
+            Siempre cerca. Siempre abierto.
+          </p>
+        </div>
+
+        {/* Buttons: on mobile bottom-aligned with safe margin above floating WA button */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up-delay-2 mt-auto pt-4 mb-24 pb-8 md:mt-0 md:pt-0 md:mb-5 md:pb-0">
           <button
             type="button"
             onClick={() => openWhatsApp()}
-            className="bg-white text-[var(--vm-green-950)] px-8 py-4 rounded-full font-medium text-lg hover:bg-[var(--vm-accent-lime)] hover:text-[var(--vm-green-950)] transition-all duration-300 w-full sm:w-auto min-w-[200px] text-center mb-[85px]"
+            className="bg-white text-[var(--vm-green-950)] px-8 py-4 rounded-full font-medium text-lg hover:bg-[var(--vm-accent-lime)] hover:text-[var(--vm-green-950)] transition-all duration-300 w-full sm:w-auto min-w-[200px] text-center"
           >
             Pedir por WhatsApp
           </button>
