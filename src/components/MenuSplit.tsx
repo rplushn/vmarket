@@ -46,7 +46,8 @@ export default function MenuSplit() {
               Desayunos típicos, almuerzos caseros y el mejor café de la zona. Todo preparado al momento con ingredientes frescos.
             </p>
 
-            {/* Menu Highlights List */}\n            <div className="space-y-6">
+            {/* Menu Highlights List */}
+            <div className="space-y-6">
               
               {/* Item 1 */}
               <div className="flex justify-between items-start group border-b border-[var(--vm-border)] pb-4">
