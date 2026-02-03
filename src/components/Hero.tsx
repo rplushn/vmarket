@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-// Import the image directly from the app folder
-import portadaImg from '../app/portada.jpg';
+
+// Force require to bypass static import path issues
+const portadaImg = require('../app/portada.jpg').default;
 
 export default function Hero() {
   return (
@@ -21,26 +22,20 @@ export default function Hero() {
       </div>
 
       {/* 2. OVERLAYS (Heavy Dark + Subtle Gold Glows) */}
-      {/* Heavy darkness to make text pop */}
       <div className="absolute inset-0 bg-[var(--vm-green-950)]/80 -z-10" />
       
-      {/* Subtle Golden Glow (Center-Top) - 'Golden Glare' */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[var(--vm-accent-gold)]/10 blur-[150px] rounded-full -z-10 mix-blend-screen opacity-60 pointer-events-none" />
       
-      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[var(--vm-green-950)] to-transparent -z-10" />
 
 
       {/* 3. HERO CONTENT */}
       <div className="vm-container relative z-10 px-4">
         
-        {/* Badge - Smaller and more refined */}
         <span className="inline-block py-1 px-3 mb-6 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white/80 text-[10px] font-medium tracking-[0.2em] uppercase animate-fade-in-up">
           Ciudad Venecia
         </span>
         
-        {/* Main Title - THIN FONT (Reference Style) */}
-        {/* Using font-light (300) or font-normal (400) to match the reference 'Mona Sans' look */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white mb-6 leading-[1.1] tracking-tight animate-fade-in-up-delay-1 drop-shadow-lg">
           Tu mercado,<br />
           <span className="font-normal text-[var(--vm-accent-lime)]">
@@ -48,13 +43,11 @@ export default function Hero() {
           </span>
         </h1>
         
-        {/* Subtitle - Clean and thin */}
         <p className="max-w-xl mx-auto mb-12 text-lg md:text-xl font-light text-white/90 animate-fade-in-up-delay-2 leading-relaxed">
           Canasta básica, comida típica y servicios del día a día. <br className="hidden md:block" />
           Siempre cerca. Siempre abierto.
         </p>
         
-        {/* Buttons - Minimalist */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up-delay-2">
           <button className="bg-white text-[var(--vm-green-950)] px-8 py-4 rounded-full font-medium text-lg hover:bg-[var(--vm-accent-lime)] hover:text-[var(--vm-green-950)] transition-all duration-300 w-full sm:w-auto min-w-[200px]">
             Pedir por WhatsApp
@@ -68,7 +61,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator - Minimal */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
         <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
