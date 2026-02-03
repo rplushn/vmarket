@@ -50,7 +50,7 @@ export default function Hero() {
         </div>
 
         {/* Buttons: on mobile bottom-aligned with safe margin above floating WA button */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up-delay-2 mt-auto pt-4 mb-24 pb-8 md:mt-0 md:pt-0 md:mb-5 md:pb-0">
+        <div className="relative flex flex-col gap-4 justify-center items-center animate-fade-in-up-delay-2 mt-auto pt-4 mb-24 pb-8 md:mt-0 md:pt-0 md:mb-5 md:pb-0">
           <button
             type="button"
             onClick={() => openWhatsApp()}
@@ -58,9 +58,9 @@ export default function Hero() {
           >
             Pedir por WhatsApp
           </button>
-          <button className="group flex items-center justify-center gap-2 text-white px-8 py-4 rounded-full font-light text-lg hover:text-[var(--vm-accent-lime)] transition-all duration-300 w-full sm:w-auto">
+          <button className="group flex items-center justify-center gap-2 text-white px-8 py-4 rounded-full font-light text-lg hover:text-[var(--vm-accent-lime)] transition-all duration-300 w-full sm:w-auto md:min-w-[200px]">
             <span>Ver Ubicaciones</span>
-            <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform shrink-0" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </button>
