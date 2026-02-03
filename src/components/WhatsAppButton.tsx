@@ -1,6 +1,7 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { openWhatsApp } from '@/utils/whatsapp';
 
 const WhatsAppIcon = () => (
@@ -15,15 +16,29 @@ const WhatsAppIcon = () => (
   </svg>
 );
 
+const buttonClassName =
+  'wa-button fixed bottom-24 right-6 md:bottom-6 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-200 hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-[var(--vm-green-950)]';
+
 export default function WhatsAppButton() {
-  return (
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const button = (
     <button
       type="button"
       onClick={() => openWhatsApp()}
-      className="wa-button fixed bottom-24 right-6 md:bottom-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-200 hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-[var(--vm-green-950)]"
+      className={buttonClassName}
+      style={{ zIndex: 9999 }}
       aria-label="Abrir chat de WhatsApp"
     >
       <WhatsAppIcon />
     </button>
   );
+
+  if (!mounted || typeof document === 'undefined') return null;
+
+  return createPortal(button, document.body);
 }
