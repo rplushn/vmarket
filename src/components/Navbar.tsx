@@ -36,9 +36,9 @@ export default function Navbar() {
     >
       <div className="vm-container flex items-center justify-between px-6">
         
-        {/* LEFT: Logo */}
-        <Link href="/" className="text-white font-bold text-2xl tracking-tighter hover:text-[var(--vm-accent-lime)] transition-colors">
-          V-MARKET
+        {/* LEFT: Official Logo V-MKT */}
+        <Link href="/" className="text-[var(--vm-accent-lime)] font-black text-3xl tracking-tighter hover:text-white transition-colors select-none">
+          V-MKT
         </Link>
 
         {/* CENTER: Navigation Links */}
@@ -66,7 +66,7 @@ export default function Navbar() {
             </Link>
             {/* TikTok (Simplified path) */}
             <Link href="#" className="hover:text-white transition-colors">
-               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v6.16c0 2.52-1.12 4.84-2.9 6.24-1.72 1.33-3.92 1.83-6.08 1.23-2.16-.6-3.95-2.25-4.66-4.33-.71-2.08-.33-4.42 1.02-6.12 1.35-1.7 3.42-2.6 5.6-2.39v4.02c-1.3-.17-2.6.46-3.37 1.55-.77 1.09-.77 2.57 0 3.66.77 1.09 2.07 1.72 3.37 1.55 1.3-.17 2.37-1.1 2.56-2.42.06-.46.06-.93 0-1.39V.02h.38z"/></svg>
+               <svg className="w-4 h-4" fill="currentColor" viewBox=\"0 0 24 24\"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v6.16c0 2.52-1.12 4.84-2.9 6.24-1.72 1.33-3.92 1.83-6.08 1.23-2.16-.6-3.95-2.25-4.66-4.33-.71-2.08-.33-4.42 1.02-6.12 1.35-1.7 3.42-2.6 5.6-2.39v4.02c-1.3-.17-2.6.46-3.37 1.55-.77 1.09-.77 2.57 0 3.66.77 1.09 2.07 1.72 3.37 1.55 1.3-.17 2.37-1.1 2.56-2.42.06-.46.06-.93 0-1.39V.02h.38z"/></svg>
             </Link>
             {/* Facebook */}
             <Link href="#" className="hover:text-white transition-colors">
