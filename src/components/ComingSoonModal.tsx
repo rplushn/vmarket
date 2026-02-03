@@ -7,10 +7,10 @@ export default function ComingSoonModal() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Show modal after a short delay for smooth entrance
+    // Show modal after 15s so the user can enjoy the Hero first (wow effect)
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 1000);
+    }, 15000);
     return () => clearTimeout(timer);
   }, []);
 
