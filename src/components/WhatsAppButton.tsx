@@ -17,7 +17,7 @@ const WhatsAppIcon = () => (
 );
 
 const buttonClassName =
-  'wa-button fixed bottom-24 right-6 md:bottom-6 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-200 hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-[var(--vm-green-950)]';
+  'wa-button fixed bottom-6 right-4 z-[9999] flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-200 hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-[var(--vm-green-950)]';
 
 export default function WhatsAppButton() {
   const [mounted, setMounted] = useState(false);
