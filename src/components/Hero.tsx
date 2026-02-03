@@ -53,11 +53,11 @@ export default function Hero() {
         </p>
         
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up-delay-2">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up-delay-2 mb-5">
           <button
             type="button"
             onClick={() => openWhatsApp()}
-            className="bg-white text-[var(--vm-green-950)] px-8 py-4 rounded-full font-medium text-lg hover:bg-[var(--vm-accent-lime)] hover:text-[var(--vm-green-950)] transition-all duration-300 w-full sm:w-auto min-w-[200px] text-center mb-20"
+            className="bg-white text-[var(--vm-green-950)] px-8 py-4 rounded-full font-medium text-lg hover:bg-[var(--vm-accent-lime)] hover:text-[var(--vm-green-950)] transition-all duration-300 w-full sm:w-auto min-w-[200px] text-center mb-[85px]"
           >
             Pedir por WhatsApp
           </button>
