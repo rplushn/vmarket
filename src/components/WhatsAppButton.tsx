@@ -20,7 +20,7 @@ export default function WhatsAppButton() {
     <button
       type="button"
       onClick={() => openWhatsApp()}
-      className="wa-button fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-200 hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-[var(--vm-green-950)]"
+      className="wa-button fixed bottom-24 right-6 md:bottom-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-200 hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-[var(--vm-green-950)]"
       aria-label="Abrir chat de WhatsApp"
     >
       <WhatsAppIcon />

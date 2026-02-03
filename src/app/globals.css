@@ -85,17 +85,17 @@ body {
   }
 }
 
-a.wa-button {
+.wa-button {
   animation: wa-enter 0.5s ease-out 0.3s forwards, wa-pulse 2.5s ease-in-out 1s infinite;
   opacity: 0;
 }
 
-a.wa-button:hover {
+.wa-button:hover {
   animation: wa-enter 0.5s ease-out 0.3s forwards, none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  a.wa-button {
+  .wa-button {
     animation: none;
     opacity: 1;
   }
