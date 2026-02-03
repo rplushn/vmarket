@@ -37,6 +37,70 @@ body {
   }
 }
 
+/* Coming Soon modal: text zoom-out on open (scale only, no reflow) */
+@keyframes cs-text-zoom-out {
+  from {
+    transform: scale(1.08);
+    opacity: 0.98;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.csTextZoomOut {
+  will-change: transform;
+  animation: cs-text-zoom-out 400ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  transform-origin: top left;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .csTextZoomOut {
+    animation: none;
+    transform: scale(1);
+    opacity: 1;
+    will-change: auto;
+  }
+}
+
+/* WhatsApp floating button: entry + subtle pulse */
+@keyframes wa-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wa-pulse {
+  0%, 100% {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1), 0 0 0 0 rgba(37, 211, 102, 0.35);
+  }
+  50% {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1), 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+}
+
+a.wa-button {
+  animation: wa-enter 0.5s ease-out 0.3s forwards, wa-pulse 2.5s ease-in-out 1s infinite;
+  opacity: 0;
+}
+
+a.wa-button:hover {
+  animation: wa-enter 0.5s ease-out 0.3s forwards, none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.wa-button {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 /* V-Market typography utilities - Using @layer utilities for better Tailwind integration */
 @layer utilities {
   .animate-fade-in-up {

@@ -1,7 +1,11 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
+import MenuComingSoonModal from './MenuComingSoonModal';
 
 export default function MenuSplit() {
+  const [isMenuModalOpen, setIsMenuModalOpen] = useState(false);
   return (
     <section className="vm-section bg-[var(--vm-green-950)] py-24">
       <div className="vm-container">
@@ -23,7 +27,7 @@ export default function MenuSplit() {
                {/* Overlay Content */}
                <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-[var(--vm-green-950)] to-transparent">
                   <span className="inline-block px-3 py-1 bg-[var(--vm-accent-lime)] text-[var(--vm-green-950)] text-xs font-bold rounded-full mb-2">
-                    Desayunos hasta 11:30 AM
+                    Almuerzos desde las 11 AM
                   </span>
                   <p className="text-white font-medium">Sabor que te encanta</p>
                </div>
@@ -43,7 +47,7 @@ export default function MenuSplit() {
               <span className="text-[var(--vm-text-300)]">sin cocinar en casa.</span>
             </h2>
             <p className="vm-p mb-10">
-              Desayunos típicos, almuerzos caseros y el mejor café de la zona. Todo preparado al momento con ingredientes frescos.
+              Almuerzos y cenas caseros, y el mejor café de la zona. Ingredientes frescos, preparados al momento.
             </p>
 
             {/* Menu Highlights List */}
@@ -55,7 +59,7 @@ export default function MenuSplit() {
                   <h4 className="text-[var(--vm-text-100)] font-bold text-lg group-hover:text-[var(--vm-accent-lime)] transition-colors">
                     Hamburguesa Clásica
                   </h4>
-                  <p className="text-[var(--vm-text-500)] text-sm mt-1">Carne de res, lechuga, tomate, cebolla y aderezo especial.</p>
+                  <p className="text-[var(--vm-text-500)] text-sm mt-1">Sabor casero en cada mordida.</p>
                 </div>
                 <span className="text-[var(--vm-accent-gold)] font-bold">L85</span>
               </div>
@@ -85,7 +89,11 @@ export default function MenuSplit() {
             </div>
 
             <div className="mt-10">
-              <button className="text-[var(--vm-text-100)] border-b border-[var(--vm-accent-lime)] pb-1 hover:text-[var(--vm-accent-lime)] transition-colors text-sm uppercase tracking-widest font-bold">
+              <button
+                type="button"
+                onClick={() => setIsMenuModalOpen(true)}
+                className="text-[var(--vm-text-100)] border-b border-[var(--vm-accent-lime)] pb-1 hover:text-[var(--vm-accent-lime)] transition-colors text-sm uppercase tracking-widest font-bold"
+              >
                 Ver Menú Completo →
               </button>
             </div>
@@ -93,6 +101,11 @@ export default function MenuSplit() {
           </div>
         </div>
       </div>
+
+      <MenuComingSoonModal
+        isOpen={isMenuModalOpen}
+        onClose={() => setIsMenuModalOpen(false)}
+      />
     </section>
   );
 }

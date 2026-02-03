@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { openWhatsApp } from '@/utils/whatsapp';
 
 export default function Footer() {
   return (
@@ -49,13 +52,13 @@ export default function Footer() {
             {/* Direct Contact & Socials */}
             <div className="text-right">
                 <p className="text-[10px] uppercase tracking-widest opacity-50 mb-1">Pedidos & Info</p>
-                <Link 
-                    href="https://wa.me/50489494639" 
-                    target="_blank"
-                    className="text-2xl font-bold text-[var(--vm-accent-lime)] hover:text-white transition-colors block mb-4"
+                <button
+                    type="button"
+                    onClick={() => openWhatsApp()}
+                    className="text-2xl font-bold text-[var(--vm-accent-lime)] hover:text-white transition-colors block mb-4 bg-transparent border-none cursor-pointer p-0 font-inherit text-right w-full"
                 >
                     +504 8949-4639
-                </Link>
+                </button>
                 
                 <div className="flex justify-end gap-6 text-[10px] font-bold tracking-widest text-white/40">
                     <Link href="#" className="hover:text-white transition-colors">INSTAGRAM</Link>

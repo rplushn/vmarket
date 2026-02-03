@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { openWhatsApp } from '@/utils/whatsapp';
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
@@ -37,21 +38,32 @@ export default function Navbar() {
       <div className="vm-container flex items-center justify-between px-6">
         
         {/* LEFT: Official Logo V-MKT */}
-        <Link href="/" className="text-[var(--vm-accent-lime)] font-black text-3xl tracking-tighter hover:text-white transition-colors select-none">
+        <Link href="/" className="text-white font-black text-3xl tracking-tighter hover:text-white transition-colors select-none">
           V-MKT
         </Link>
 
         {/* CENTER: Navigation Links */}
         <nav className="hidden md:flex items-center gap-8">
-          {['INICIO', 'PRODUCTOS', 'PEDIDO EN LÍNEA', 'CONTACTO', 'AYUDA'].map((item) => (
-            <Link 
-              key={item} 
-              href="#" 
-              className="text-white/80 hover:text-white text-xs font-medium tracking-widest transition-colors"
-            >
-              {item}
-            </Link>
-          ))}
+          {['INICIO', 'PRODUCTOS', 'PEDIDO EN LÍNEA', 'CONTACTO', 'AYUDA'].map((item) =>
+            item === 'CONTACTO' ? (
+              <button
+                key={item}
+                type="button"
+                onClick={() => openWhatsApp()}
+                className="text-white/80 hover:text-white text-xs font-medium tracking-widest transition-colors bg-transparent border-none cursor-pointer p-0 font-inherit"
+              >
+                {item}
+              </button>
+            ) : (
+              <Link
+                key={item}
+                href="#"
+                className="text-white/80 hover:text-white text-xs font-medium tracking-widest transition-colors"
+              >
+                {item}
+              </Link>
+            )
+          )}
         </nav>
 
         {/* RIGHT: Login & Socials */}

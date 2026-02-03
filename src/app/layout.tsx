@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google"; // Using Inter as a safe, modern default
 import "./globals.css";
 import Navbar from "../components/Navbar";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 // Load Inter font from Google Fonts
 const inter = Inter({ subsets: ["latin"] });
@@ -23,6 +24,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import { openWhatsApp } from '@/utils/whatsapp';
 
 export default function Hero() {
   return (
@@ -51,7 +54,11 @@ export default function Hero() {
         
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up-delay-2">
-          <button className="bg-white text-[var(--vm-green-950)] px-8 py-4 rounded-full font-medium text-lg hover:bg-[var(--vm-accent-lime)] hover:text-[var(--vm-green-950)] transition-all duration-300 w-full sm:w-auto min-w-[200px]">
+          <button
+            type="button"
+            onClick={() => openWhatsApp()}
+            className="bg-white text-[var(--vm-green-950)] px-8 py-4 rounded-full font-medium text-lg hover:bg-[var(--vm-accent-lime)] hover:text-[var(--vm-green-950)] transition-all duration-300 w-full sm:w-auto min-w-[200px] text-center"
+          >
             Pedir por WhatsApp
           </button>
           <button className="group flex items-center justify-center gap-2 text-white px-8 py-4 rounded-full font-light text-lg hover:text-[var(--vm-accent-lime)] transition-all duration-300 w-full sm:w-auto">
