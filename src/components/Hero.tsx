@@ -8,13 +8,11 @@ export default function Hero() {
     <section className="relative min-h-screen flex flex-col justify-start pt-32 pb-0 overflow-hidden bg-[var(--vm-green-950)]">
       
       {/* 1. ATMOSPHERIC GLOWS */}
-      {/* Top center glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[500px] bg-[var(--vm-accent-lime)]/10 blur-[150px] rounded-full -z-10 pointer-events-none" />
-      {/* Bottom glow behind image */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-[var(--vm-green-900)]/50 blur-[100px] -z-10 pointer-events-none" />
 
       {/* 2. HERO TEXT CONTENT */}
-      <div className="vm-container relative z-10 flex flex-col items-center text-center px-4 mb-16">
+      <div className="vm-container relative z-10 flex flex-col items-center text-center px-4 mb-12">
         
         {/* Badge */}
         <span className="inline-block py-1.5 px-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-[var(--vm-accent-lime)] text-xs font-bold tracking-[0.2em] uppercase mb-8 animate-fade-in-up shadow-lg shadow-black/20">
@@ -49,22 +47,19 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* 3. ULTRAWIDE CINEMATIC IMAGE */}
+      {/* 3. CENTERED COMPACT IMAGE */}
       <div className="relative w-full mt-auto animate-fade-in-up-delay-2 perspective-[2000px]">
         
-        {/* The Image Wrapper - No heavy borders, just expansive view */}
-        <div className="relative w-full max-w-[95%] mx-auto transform-style-3d group">
+        {/* Reduced width container: approx 30% smaller than full width (using max-w-5xl approx 64rem/1024px) */}
+        <div className="relative w-full max-w-5xl mx-auto transform-style-3d group px-4">
             
-            {/* Glow effect behind the image */}
-            <div className="absolute -inset-1 bg-gradient-to-t from-[var(--vm-accent-lime)]/20 to-transparent blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-
-            <div className="relative rounded-t-[3rem] overflow-hidden shadow-[0_-50px_100px_-20px_rgba(0,0,0,0.7)] border-t border-x border-white/10 bg-[var(--vm-green-900)]">
+            <div className="relative rounded-t-[2rem] overflow-hidden shadow-[0_-20px_60px_-10px_rgba(0,0,0,0.8)] border-t border-x border-white/10 bg-[var(--vm-green-900)]">
                 
                 {/* Image */}
-                <div className="relative aspect-[16/8] md:aspect-[21/9] w-full">
+                <div className="relative aspect-[16/9] w-full">
                     <Image
                         src={portadaImg}
-                        alt="Fachada V-Market Ultrawide"
+                        alt="Fachada V-Market"
                         fill
                         priority
                         placeholder="blur"
@@ -73,11 +68,8 @@ export default function Hero() {
                     />
                 </div>
 
-                {/* Cinematic Fade to Black (Seamless Blend) */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--vm-green-950)] via-[var(--vm-green-950)]/20 to-transparent z-10" />
-                
-                {/* Reflection/Shine */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-transparent z-20 pointer-events-none mix-blend-overlay" />
+                {/* Cinematic Fade to Black */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--vm-green-950)] via-transparent to-transparent z-10" />
             </div>
         </div>
       </div>
