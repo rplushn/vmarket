@@ -28,7 +28,7 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[var(--vm-green-950)] to-transparent z-10" />
 
       {/* 3. HERO CONTENT (z-20 to sit on top of everything) */}
-      <div className="vm-container relative z-20 px-4">
+      <div className="vm-container relative z-20 px-4 mt-[300px]">
         
         {/* Badge */}
         <span className="inline-block py-1 px-3 mb-6 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white/80 text-[10px] font-medium tracking-[0.2em] uppercase animate-fade-in-up">
