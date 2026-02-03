@@ -6,7 +6,7 @@ import { openWhatsApp } from '@/utils/whatsapp';
 
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-screen flex flex-col items-center text-center overflow-hidden bg-[var(--vm-green-950)] isolation-auto md:justify-center">
+    <section className="relative h-screen min-h-[100dvh] flex flex-col items-center text-center overflow-hidden bg-[var(--vm-green-950)] isolation-auto pt-40 md:justify-center md:pt-0">
       
       {/* 1. BACKGROUND IMAGE (z-0 to ensure it sits on top of section background but behind content) */}
       <div className="absolute inset-0 z-0">
@@ -31,7 +31,7 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[var(--vm-green-950)] to-transparent z-10" />
 
       {/* 3. HERO CONTENT (z-20 to sit on top of everything) */}
-      <div className="vm-container relative z-20 px-4 flex-1 flex flex-col justify-between pt-32 md:flex-none md:justify-center md:pt-0 md:mt-[300px] w-full max-w-5xl">
+      <div className="vm-container relative z-20 px-4 flex-1 flex flex-col justify-between md:flex-none md:justify-center md:mt-[300px] w-full max-w-5xl">
         {/* Top block: badge + title + subtitle (center stays clear on mobile) */}
         <div>
           <span className="inline-block py-1 px-3 mb-6 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white/80 text-[10px] font-medium tracking-[0.2em] uppercase animate-fade-in-up">
